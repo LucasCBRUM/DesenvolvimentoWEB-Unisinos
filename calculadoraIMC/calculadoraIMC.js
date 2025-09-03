@@ -1,3 +1,4 @@
+//Evento que espera o input no campo altura para calcular o IMC
 document.getElementById('altura').addEventListener('input', function(event) {
             event.preventDefault();
             const peso = document.getElementById('peso').value;
@@ -21,6 +22,8 @@ document.getElementById('altura').addEventListener('input', function(event) {
                 document.getElementById('classificacao').innerText = '';
             }
         });
+
+//Validação de numero nos campos
 document.getElementById('peso').addEventListener('input', function() {
     if (this.value <= 0) {
         this.setCustomValidity('Preencha este campo com um número maior que 0.');}
@@ -35,6 +38,3 @@ document.getElementById('altura').addEventListener('input', function() {
             this.setCustomValidity('');
         }
     });    
-
-//document.getElementById('peso').setCustomValidity('Preencha este campo com um número maior que 0.');
-//document.getElementById('altura').setCustomValidity('Preencha este campo com um número maior que 0.');
